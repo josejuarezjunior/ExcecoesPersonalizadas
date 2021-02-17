@@ -32,9 +32,13 @@ namespace Course {
             catch (FormatException e) {
                 Console.WriteLine("Error in format: " + e.Message);
             }
+            //Caso haja uma exceção(erro) no domínio, relativo à lógica desse programa
             catch (DomainException e) {
                 Console.WriteLine("Error in reservation: " + e.Message);
             }
+            /*Exception é o erro mais genérico na hierarquia de exceções.
+            ** Qualquer outro erro será direcionado para esta exceção!
+            */
             catch (Exception e) {
                 Console.WriteLine("Unexpected error: " + e.Message);
             }
